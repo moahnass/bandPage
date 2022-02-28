@@ -1,0 +1,41 @@
+{
+  "name": "bandpage",
+  "version": "1.0.0",
+  "description": "This is the final project for Front-End Web UI Frameworks and Tools: Bootstrap 4",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* --out-dir='dist/img'",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin bio.html -d dist --htmlmin -o dist/bio.html && usemin media.html -d dist --htmlmin -o dist/media.html && usemin music.html -d dist --htmlmin -o dist/music.html && usemin news.html -d dist --htmlmin -o dist/news.html && usemin store.html -d dist --htmlmin -o dist/store.html",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moahnass/bandPage.git"
+  },
+  "author": "Noah Mass",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moahnass/bandPage/issues"
+  },
+  "homepage": "https://github.com/moahnass/bandPage#readme",
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "lite-server": "^2.6.1",
+    "rimraf": "^2.6.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
